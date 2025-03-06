@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background: url("assets/bg.png") no-repeat center center/cover;
+}
+
+#start-button {
+  padding: 30px 80px;
+  font-size: 34px;
+  background-color: #dd1313;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#start-button:hover {
+  background-color: #390505;
+}
+
+#config-button {
+  padding: 30px 80px;
+  font-size: 34px;
+  background-color: #dd1313;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#config-button:hover {
+  background-color: #390505;
+}

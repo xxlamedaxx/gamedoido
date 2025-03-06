@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tela Inicial</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button id="start-button">Jogar</button>
+    <button id="config-button">Ajuda</button>
+
+    <!-- Texto de ajuda oculto -->
+    <div
+      id="ajuda-texto"
+      style="
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 24px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+      "
+    >
+      "Você é um caçador de fantasmas! 👻🕵️‍♂️<br />
+      Sua missão: Capturar os fantasmas antes que toquem o chão.<br />
+      Objetivo: Pegue 10 fantasmas para vencer!<br />
+      <b>Cuidado!</b><br />
+      Se um fantasma cair, a caçada termina. Boa sorte!"
+    </div>
+
+    <script>
+      document
+        .getElementById("start-button")
+        .addEventListener("click", function () {
+          window.location.href = "game.html"; // Redireciona para o jogo
+        });
+
+      document
+        .getElementById("config-button")
+        .addEventListener("click", function () {
+          let ajudaTexto = document.getElementById("ajuda-texto");
+          ajudaTexto.style.display =
+            ajudaTexto.style.display === "none" ? "block" : "none";
+        });
+    </script>
+  </body>
+</html>

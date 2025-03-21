@@ -6,7 +6,7 @@ const config = {
   width: larguraJogo,
   height: alturaJogo,
   scale: {
-    mode: Phaser.Scale.FIT, // Ajusta o jogo para caber na tela sem cortar nada
+    mode: Phaser.Scale.ENVELOP, // Ajusta o jogo para caber na tela sem cortar nada
     autoCenter: Phaser.Scale.CENTER_BOTH, // Centraliza o jogo na tela
   },
   physics: {
@@ -50,6 +50,11 @@ function preload() {
 }
 
 function create() {
+  game.scale.on("orientationchange", function (orientation) {
+    if (orientation === Phaser.Scale.PORTRAIT) {
+      alert("Gire o dispositivo para jogar no modo paisagem!");
+    }
+  });
   // Adicionando fundo ao jogo
 
   this.add.image(larguraJogo / 2, alturaJogo / 2, "background").setScale(4);
